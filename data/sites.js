@@ -745,5 +745,142 @@ const LAND_SITES = [
         nearestHighway: { name: 'US-290', distance: 0.5 },
         demographics: { pop5mi: 110000, medianIncome: 68000, laborForce5mi: 55000 },
         criteria: { hwAccess: 8, zoning: 8, rawLand: 5, laborPool: 7, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 5, infill: 5, utilities: 10 }
+    },
+
+    // ===== GIS-VERIFIED VACANT PARCELS (from Dallas County ArcGIS API queries) =====
+
+    {
+        id: 'dfw-300', name: '11131 Goodnight Ln — JMS LLC (75 ac)', market: 'dfw', submarket: 'dfw-stemmons',
+        coords: [32.8847, -96.9076], acreage: 74.6,
+        zoning: 'Industrial Vacant', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #00000601975000000. Owner: Jackson Myers Stewart LLC. 74.6 ac industrial-zoned vacant land on Goodnight Ln near I-35E/Stemmons corridor. Part of ~122-acre JMS land position across 4 parcels. Adjacent to Brown Southwell 43 ac — combined ~195 ac assemblage opportunity.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 0.8 },
+        demographics: { pop5mi: 180000, medianIncome: 42000, laborForce5mi: 90000 },
+        parcel: {
+            id: 'DCAD-00000601975000000',
+            owner: 'Jackson Myers Stewart LLC',
+            cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=00000601975000000',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-96.90429, 32.88510], [-96.90431, 32.88627], [-96.90755, 32.88622],
+                    [-96.90754, 32.88578], [-96.91318, 32.88577], [-96.91325, 32.88603],
+                    [-96.91325, 32.88604], [-96.91384, 32.88328], [-96.90753, 32.88329],
+                    [-96.90200, 32.88330], [-96.90201, 32.88441], [-96.90202, 32.88441],
+                    [-96.90273, 32.88441], [-96.90273, 32.88496], [-96.90202, 32.88496],
+                    [-96.90201, 32.88496], [-96.90202, 32.88569], [-96.90203, 32.88569],
+                    [-96.90332, 32.88567], [-96.90332, 32.88512], [-96.90429, 32.88510]
+                ]]
+            }
+        },
+        criteria: { hwAccess: 8, zoning: 10, rawLand: 10, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'dfw-301', name: '11101 Newkirk St — Brown Southwell (43 ac)', market: 'dfw', submarket: 'dfw-stemmons',
+        coords: [32.8880, -96.9068], acreage: 43.5,
+        zoning: 'Industrial Vacant', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #00000603488000000. Owner: Brown Southwell Properties Inc. 43.5 ac industrial vacant on Newkirk St. Adjacent to Jackson Myers Stewart 75 ac — combined ~195 ac contiguous industrial assemblage near I-35E/Stemmons. Rare large-format infill opportunity.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 0.8 },
+        demographics: { pop5mi: 180000, medianIncome: 42000, laborForce5mi: 90000 },
+        parcel: {
+            id: 'DCAD-00000603488000000',
+            owner: 'Brown Southwell Properties Inc',
+            cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=00000603488000000',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-96.90204, 32.88643], [-96.90202, 32.88643], [-96.90202, 32.88657],
+                    [-96.90205, 32.88657], [-96.90260, 32.88656], [-96.90755, 32.88649],
+                    [-96.90756, 32.88788], [-96.90756, 32.88794], [-96.90757, 32.89070],
+                    [-96.90758, 32.89095], [-96.90767, 32.89095], [-96.90984, 32.89098],
+                    [-96.91220, 32.89101], [-96.91243, 32.88975], [-96.91235, 32.88975],
+                    [-96.91227, 32.88975], [-96.91219, 32.88977], [-96.91212, 32.88978],
+                    [-96.91204, 32.88981], [-96.91197, 32.88984], [-96.91191, 32.88988],
+                    [-96.91184, 32.88993], [-96.91135, 32.89031], [-96.91129, 32.89035],
+                    [-96.91123, 32.89038], [-96.91116, 32.89042], [-96.91109, 32.89044],
+                    [-96.91102, 32.89046], [-96.91094, 32.89048], [-96.91087, 32.89049],
+                    [-96.91079, 32.89049], [-96.90934, 32.89047], [-96.90978, 32.88829],
+                    [-96.91123, 32.88829], [-96.91169, 32.88598], [-96.90803, 32.88598],
+                    [-96.90803, 32.88634], [-96.90204, 32.88643]
+                ]]
+            }
+        },
+        criteria: { hwAccess: 8, zoning: 10, rawLand: 10, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'dfw-302', name: '10900 Luna Rd — JMS LLC (21 ac)', market: 'dfw', submarket: 'dfw-stemmons',
+        coords: [32.884, -96.902], acreage: 20.8,
+        zoning: 'Industrial Vacant', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #00000601966000100. Owner: Jackson Myers Stewart LLC. 20.8 ac industrial vacant on Luna Rd. Part of the JMS/Brown Southwell assemblage. Luna Rd frontage provides good truck access.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 1.0 },
+        demographics: { pop5mi: 180000, medianIncome: 42000, laborForce5mi: 90000 },
+        parcel: { id: 'DCAD-00000601966000100', owner: 'Jackson Myers Stewart LLC', cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=00000601966000100' },
+        criteria: { hwAccess: 7, zoning: 10, rawLand: 10, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'dfw-303', name: '11139 Goodnight Ln — JMS LLC (30 ac)', market: 'dfw', submarket: 'dfw-stemmons',
+        coords: [32.886, -96.908], acreage: 29.5,
+        zoning: 'Industrial Vacant', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #00654000000010000. Owner: Jackson Myers Stewart LLC. 29.5 ac industrial vacant, contiguous with JMS 75-ac parcel. Combined JMS position on Goodnight/Luna is ~122 ac.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 0.8 },
+        demographics: { pop5mi: 180000, medianIncome: 42000, laborForce5mi: 90000 },
+        parcel: { id: 'DCAD-00654000000010000', owner: 'Jackson Myers Stewart LLC', cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=00654000000010000' },
+        criteria: { hwAccess: 7, zoning: 10, rawLand: 10, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'dfw-304', name: '2304 Century Center Blvd, Irving (13 ac)', market: 'dfw', submarket: 'dfw-dfw-airport',
+        coords: [32.878, -96.950], acreage: 13.3,
+        zoning: 'Industrial Vacant', taxRate: 2.48, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #320974500A0010100. Owner: DP WPC TX LLC. 13.3 ac industrial vacant on Century Center Blvd in Irving near DFW Airport. Adjacent to 10-ac Farrow parcel. Airport submarket commands highest rents in DFW (~$8.50/SF NNN).',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'SH-183', distance: 0.5 },
+        demographics: { pop5mi: 165000, medianIncome: 52000, laborForce5mi: 82000 },
+        parcel: { id: 'DCAD-320974500A0010100', owner: 'DP WPC TX LLC', cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=320974500A0010100' },
+        criteria: { hwAccess: 8, zoning: 10, rawLand: 9, laborPool: 8, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 10, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'dfw-305', name: '2201 Century Center Blvd, Irving (10 ac)', market: 'dfw', submarket: 'dfw-dfw-airport',
+        coords: [32.877, -96.948], acreage: 10.1,
+        zoning: 'Industrial Vacant', taxRate: 2.48, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #32063750IR0010000. Owner: Farrow Edwin M. 10.1 ac industrial vacant on Century Center Blvd, Irving. Adjacent to DP WPC 13 ac — combined 23 ac in DFW Airport submarket.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'SH-183', distance: 0.5 },
+        demographics: { pop5mi: 165000, medianIncome: 52000, laborForce5mi: 82000 },
+        parcel: { id: 'DCAD-32063750IR0010000', owner: 'Farrow Edwin M', cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=32063750IR0010000' },
+        criteria: { hwAccess: 8, zoning: 10, rawLand: 9, laborPool: 8, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 10, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'dfw-306', name: '1440 Storey Ln — City of Dallas (31 ac)', market: 'dfw', submarket: 'dfw-stemmons',
+        coords: [32.890, -96.912], acreage: 31.4,
+        zoning: 'Commercial Vacant', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #00000434200000000. Owner: City of Dallas. 31.4 ac commercial vacant on Storey Ln. City-owned — potential public-private partnership or ground lease opportunity. Part of 83+ ac of contiguous city-owned vacant land on Storey Ln.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 1.2 },
+        demographics: { pop5mi: 175000, medianIncome: 40000, laborForce5mi: 88000 },
+        parcel: { id: 'DCAD-00000434200000000', owner: 'City of Dallas', cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=00000434200000000' },
+        criteria: { hwAccess: 7, zoning: 8, rawLand: 9, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 7, utilities: 10 }
+    },
+    {
+        id: 'dfw-307', name: '2320 Crown Rd — City of Dallas (10 ac)', market: 'dfw', submarket: 'dfw-stemmons',
+        coords: [32.882, -96.905], acreage: 10.0,
+        zoning: 'Industrial Vacant', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: DCAD #00000604006000000. Owner: City of Dallas. 10 ac industrial vacant on Crown Rd. City-owned parcel in Stemmons corridor.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 0.9 },
+        demographics: { pop5mi: 175000, medianIncome: 40000, laborForce5mi: 88000 },
+        parcel: { id: 'DCAD-00000604006000000', owner: 'City of Dallas', cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=00000604006000000' },
+        criteria: { hwAccess: 7, zoning: 10, rawLand: 9, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 8, utilities: 10 }
     }
 ];
