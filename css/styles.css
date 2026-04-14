@@ -400,7 +400,30 @@ html, body { height: 100%; font-family: 'Inter', system-ui, sans-serif; backgrou
 .leaflet-popup-tip { background: #151b2e !important; }
 .leaflet-popup-content { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; }
 
-/* Submarket hover tooltip */
+/* Submarket hover card (fixed upper right) */
+#submarket-hover-card {
+    position: absolute;
+    top: 60px; right: 10px;
+    z-index: 998;
+    background: rgba(10, 15, 26, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid #2a3352;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    max-width: 280px;
+    display: none;
+    pointer-events: none;
+}
+#submarket-hover-card.visible { display: block; }
+#submarket-hover-card .tt-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+#submarket-hover-card .tt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+#submarket-hover-card .tt-label { color: #64748b; font-size: 0.7rem; text-transform: uppercase; }
+#submarket-hover-card .tt-val { font-weight: 500; }
+#submarket-hover-card .tt-link { display: block; margin-top: 8px; color: #3b82f6; font-size: 0.75rem; }
+
+/* Site tooltip (still follows cursor) */
 .submarket-tooltip {
     background: rgba(10, 15, 26, 0.95) !important;
     color: #e2e8f0 !important;
@@ -412,12 +435,6 @@ html, body { height: 100%; font-family: 'Inter', system-ui, sans-serif; backgrou
     box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
     max-width: 280px !important;
 }
-.submarket-tooltip .leaflet-tooltip-arrow { display: none; }
-.submarket-tooltip .tt-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
-.submarket-tooltip .tt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
-.submarket-tooltip .tt-label { color: #64748b; font-size: 0.7rem; text-transform: uppercase; }
-.submarket-tooltip .tt-val { font-weight: 500; }
-.submarket-tooltip .tt-link { display: block; margin-top: 8px; color: #3b82f6; font-size: 0.75rem; }
 
 /* City labels on map */
 .city-label {

@@ -299,10 +299,10 @@
                 });
                 submarketLabels.push(label);
 
-                // Hover tooltip with stats
-                let tooltipHtml = `<div class="tt-name">${props.name}</div>`;
+                // Build hover card HTML
+                let hoverHtml = `<div class="tt-name">${props.name}</div>`;
                 if (stats) {
-                    tooltipHtml += `<div class="tt-grid">
+                    hoverHtml += `<div class="tt-grid">
                         <div><span class="tt-label">Vacancy</span><div class="tt-val">${stats.vacancy}%</div></div>
                         <div><span class="tt-label">YoY Δ</span><div class="tt-val" style="color:${stats.vacancyDelta > 0 ? '#ef4444' : '#22c55e'}">${stats.vacancyDelta > 0 ? '+' : ''}${stats.vacancyDelta.toFixed(1)} pp</div></div>
                         <div><span class="tt-label">Absorption</span><div class="tt-val">${formatSF(stats.absorption)}</div></div>
@@ -311,16 +311,9 @@
                         <div><span class="tt-label">Health</span><div class="tt-val" style="color:${healthToColor(health)}">${health}/100</div></div>
                     </div>`;
                 } else {
-                    tooltipHtml += '<div style="color:#64748b;">No stats available</div>';
+                    hoverHtml += '<div style="color:#64748b;">No stats available</div>';
                 }
-                tooltipHtml += '<div class="tt-link">Click for full details →</div>';
-
-                layer.bindTooltip(tooltipHtml, {
-                    className: 'submarket-tooltip',
-                    sticky: true,
-                    direction: 'auto',
-                    opacity: 1
-                });
+                hoverHtml += '<div class="tt-link">Click for full details →</div>';
 
                 const baseStyle = {
                     fillOpacity: 0.20,
@@ -329,8 +322,16 @@
                 };
 
                 layer.on('click', () => openSubmarketPanel(props));
-                layer.on('mouseover', () => layer.setStyle({ fillOpacity: 0.35, weight: 3.5 }));
-                layer.on('mouseout', () => layer.setStyle(baseStyle));
+                layer.on('mouseover', () => {
+                    layer.setStyle({ fillOpacity: 0.35, weight: 3.5 });
+                    const card = document.getElementById('submarket-hover-card');
+                    card.innerHTML = hoverHtml;
+                    card.classList.add('visible');
+                });
+                layer.on('mouseout', () => {
+                    layer.setStyle(baseStyle);
+                    document.getElementById('submarket-hover-card').classList.remove('visible');
+                });
             }
         });
 
