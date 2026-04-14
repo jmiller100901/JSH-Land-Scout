@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSH Land Scout — Site Reports</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/report.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="report-app">
+        <!-- Header -->
+        <div id="report-header">
+            <div class="report-header-left">
+                <a href="index.html" class="back-link">← Map View</a>
+                <h1>Site Reports</h1>
+            </div>
+            <div class="report-header-right">
+                <select id="report-market-select">
+                    <option value="all">All Markets</option>
+                    <option value="dfw">Dallas–Fort Worth</option>
+                    <option value="austin">Austin</option>
+                    <option value="san-antonio">San Antonio</option>
+                    <option value="houston">Houston</option>
+                    <option value="charlotte">Charlotte</option>
+                </select>
+                <select id="report-sort">
+                    <option value="score-desc">Score (High → Low)</option>
+                    <option value="score-asc">Score (Low → High)</option>
+                    <option value="acres-desc">Acreage (Large → Small)</option>
+                    <option value="acres-asc">Acreage (Small → Large)</option>
+                    <option value="vacancy-asc">Submarket Vacancy (Low → High)</option>
+                    <option value="name-asc">Name (A → Z)</option>
+                </select>
+                <input type="text" id="report-search" placeholder="Search sites..." />
+                <button id="report-export-btn">Export CSV</button>
+            </div>
+        </div>
+
+        <!-- Summary Stats -->
+        <div id="report-summary"></div>
+
+        <!-- Site Cards -->
+        <div id="report-grid"></div>
+    </div>
+
+    <script src="data/markets.js"></script>
+    <script src="data/sites.js"></script>
+    <script src="data/industrial-stats.js"></script>
+    <script src="js/scoring.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>
