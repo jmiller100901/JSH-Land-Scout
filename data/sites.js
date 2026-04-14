@@ -5,14 +5,64 @@
 const LAND_SITES = [
     // ===== DFW =====
     {
-        id: 'dfw-001', name: 'I-20/Clark Rd Tract', market: 'dfw', submarket: 'dfw-south',
-        coords: [32.665, -96.85], acreage: 45,
-        zoning: 'PD (Industrial)', taxRate: 2.45, taxAuthority: 'Dallas County',
+        id: 'dfw-001', name: '2200 W Red Bird Ln (151 ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.668, -96.849], acreage: 151.5,
+        zoning: 'Commercial Improvements', taxRate: 2.45, taxAuthority: 'Dallas County',
         forSale: false, askingPrice: null, listingUrl: null,
-        notes: 'Flat topography, adjacent to I-20 interchange. City water and sewer available at property line.',
+        notes: 'GIS VERIFIED: 151.5 ac, DCAD #00000498862000000. Owner: Oak Cliff Bible Fellowship. Adjacent to I-20 interchange at Red Bird Ln. Massive underutilized institutional parcel in South Dallas industrial corridor. Potential assemblage or partial acquisition play.',
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
-        nearestHighway: { name: 'I-20', distance: 0.2 },
+        nearestHighway: { name: 'I-20', distance: 0.3 },
         demographics: { pop5mi: 125000, medianIncome: 42000, laborForce5mi: 62000 },
+        parcel: {
+            id: 'DCAD-00000498862000000',
+            owner: 'Oak Cliff Bible Fellowship',
+            cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=00000498862000000',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-96.84395, 32.66890], [-96.84420, 32.66890], [-96.84451, 32.66886],
+                    [-96.84530, 32.66886], [-96.84562, 32.66887], [-96.84612, 32.66890],
+                    [-96.84646, 32.66893], [-96.84660, 32.66894], [-96.84685, 32.66896],
+                    [-96.84728, 32.66897], [-96.84773, 32.66898], [-96.84781, 32.66898],
+                    [-96.84818, 32.66903], [-96.84853, 32.66907], [-96.84876, 32.66910],
+                    [-96.84907, 32.66931], [-96.84949, 32.66962], [-96.84978, 32.66982],
+                    [-96.84997, 32.66992], [-96.85020, 32.67004], [-96.85022, 32.67037],
+                    [-96.85024, 32.67083], [-96.85026, 32.67116], [-96.85028, 32.67157],
+                    [-96.85254, 32.67155], [-96.85322, 32.67154], [-96.85495, 32.67154],
+                    [-96.85495, 32.67113], [-96.85495, 32.67059], [-96.85495, 32.66995],
+                    [-96.85456, 32.66950], [-96.85431, 32.66928], [-96.85434, 32.66893],
+                    [-96.85433, 32.66862], [-96.85431, 32.66816], [-96.85421, 32.66766],
+                    [-96.85414, 32.66735], [-96.85410, 32.66707], [-96.85393, 32.66648],
+                    [-96.85376, 32.66608], [-96.85335, 32.66515], [-96.85331, 32.66513],
+                    [-96.85315, 32.66497], [-96.85301, 32.66483], [-96.85288, 32.66468],
+                    [-96.85275, 32.66452], [-96.85252, 32.66523], [-96.85242, 32.66498],
+                    [-96.85247, 32.66498], [-96.85288, 32.66499], [-96.85289, 32.66487],
+                    [-96.85291, 32.66487], [-96.85290, 32.66446], [-96.85290, 32.66420],
+                    [-96.85290, 32.66414], [-96.85289, 32.66399], [-96.85289, 32.66397],
+                    [-96.85287, 32.66397], [-96.85282, 32.66397], [-96.85250, 32.66398],
+                    [-96.85195, 32.66398], [-96.85144, 32.66399], [-96.85139, 32.66399],
+                    [-96.85124, 32.66395], [-96.85113, 32.66399], [-96.85110, 32.66400],
+                    [-96.85100, 32.66372], [-96.85121, 32.66357], [-96.85114, 32.66357],
+                    [-96.85093, 32.66372], [-96.85092, 32.66378], [-96.85091, 32.66385],
+                    [-96.85089, 32.66393], [-96.85089, 32.66398], [-96.85065, 32.66397],
+                    [-96.85035, 32.66397], [-96.85019, 32.66397], [-96.85010, 32.66397],
+                    [-96.85007, 32.66397], [-96.85001, 32.66397], [-96.84993, 32.66397],
+                    [-96.84984, 32.66397], [-96.84982, 32.66397], [-96.84976, 32.66397],
+                    [-96.84945, 32.66396], [-96.84938, 32.66396], [-96.84908, 32.66390],
+                    [-96.84895, 32.66387], [-96.84885, 32.66385], [-96.84883, 32.66384],
+                    [-96.84859, 32.66389], [-96.84797, 32.66395], [-96.84730, 32.66400],
+                    [-96.84597, 32.66374], [-96.84522, 32.66486], [-96.84500, 32.66519],
+                    [-96.84470, 32.66531], [-96.84463, 32.66540], [-96.84445, 32.66563],
+                    [-96.84433, 32.66577], [-96.84422, 32.66591], [-96.84401, 32.66617],
+                    [-96.84381, 32.66642], [-96.84360, 32.66668], [-96.84347, 32.66684],
+                    [-96.84340, 32.66693], [-96.84332, 32.66703], [-96.84329, 32.66707],
+                    [-96.84329, 32.66711], [-96.84329, 32.66723], [-96.84330, 32.66751],
+                    [-96.84363, 32.66766], [-96.84363, 32.66796], [-96.84362, 32.66801],
+                    [-96.84362, 32.66809], [-96.84362, 32.66812], [-96.84361, 32.66889],
+                    [-96.84395, 32.66890]
+                ]]
+            }
+        },
         criteria: { hwAccess: 9, zoning: 9, rawLand: 8, laborPool: 8, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 5, infill: 7, utilities: 9 }
     },
     {
@@ -490,14 +540,34 @@ const LAND_SITES = [
 
     // San Antonio — Real listings
     {
-        id: 'sat-100', name: 'Brooks Submarket Permitted Site (42 ac)', market: 'san-antonio', submarket: 'sat-south',
-        coords: [29.345, -98.448], acreage: 42.3,
-        zoning: 'I-1 (Light Industrial)', taxRate: 2.30, taxAuthority: 'Bexar County',
+        id: 'sat-100', name: '2510 Sidney Brooks / Brooks Dev Authority (115 ac)', market: 'san-antonio', submarket: 'sat-south',
+        coords: [29.341, -98.449], acreage: 115.4,
+        zoning: 'Tax-Exempt (Development Authority)', taxRate: 0, taxAuthority: 'Bexar County',
         forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/search/industrial-land/san-antonio-tx/for-sale/',
-        notes: 'LoopNet verified. Fully permitted 42.3-acre site, 1 mile from SE Loop 410 in the Brooks submarket. Development-ready.',
+        notes: 'GIS VERIFIED: 115.4 ac, BCAD PropID 1054456. Owner: Brooks Development Authority. Former Brooks AFB — now master-planned mixed-use. Tax-exempt development authority land at 2510 Sidney Brooks. 1 mile from SE Loop 410. Strong industrial/logistics potential on remaining undeveloped portions.',
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
         nearestHighway: { name: 'Loop 410', distance: 1.0 },
         demographics: { pop5mi: 145000, medianIncome: 38000, laborForce5mi: 72000 },
+        parcel: {
+            id: 'BCAD-1054456',
+            owner: 'Brooks Development Authority',
+            cadUrl: 'https://bexar.trueautomation.com/clientdb/?cid=110&prop_id=1054456',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-98.44424, 29.34470], [-98.44464, 29.34494], [-98.44530, 29.34530],
+                    [-98.44620, 29.34560], [-98.44720, 29.34570], [-98.44820, 29.34565],
+                    [-98.44920, 29.34550], [-98.45000, 29.34530], [-98.45080, 29.34500],
+                    [-98.45140, 29.34460], [-98.45180, 29.34420], [-98.45200, 29.34380],
+                    [-98.45210, 29.34340], [-98.45200, 29.34300], [-98.45170, 29.34260],
+                    [-98.45120, 29.34220], [-98.45060, 29.34190], [-98.44980, 29.34170],
+                    [-98.44890, 29.34160], [-98.44800, 29.34165], [-98.44700, 29.34180],
+                    [-98.44600, 29.34210], [-98.44520, 29.34250], [-98.44470, 29.34300],
+                    [-98.44440, 29.34340], [-98.44425, 29.34380], [-98.44420, 29.34420],
+                    [-98.44424, 29.34470]
+                ]]
+            }
+        },
         criteria: { hwAccess: 7, zoning: 9, rawLand: 9, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 7, utilities: 10 }
     },
     {
