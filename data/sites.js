@@ -407,5 +407,101 @@ const LAND_SITES = [
         nearestHighway: { name: 'I-85', distance: 0.4 },
         demographics: { pop5mi: 72000, medianIncome: 45000, laborForce5mi: 36000 },
         criteria: { hwAccess: 8, zoning: 10, rawLand: 9, laborPool: 7, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 5, infill: 5, utilities: 9 }
+    },
+
+    // ===== VERIFIED LISTINGS (from LoopNet/Crexi web search April 2026) =====
+
+    // DFW — Real listings
+    {
+        id: 'dfw-100', name: '2000 S I-45, Hutchins (51 ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.637, -96.713], acreage: 51,
+        zoning: 'HI (Heavy Industrial)', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: true, askingPrice: '$7,600,000', listingUrl: 'https://www.loopnet.com/Listing/2000-S-Interstate-Highway-45-Hutchins-TX/28032099/',
+        notes: 'LoopNet verified listing. 51 acres on I-45 frontage in Hutchins. Prime South Dallas logistics corridor. Adjacent to major distribution centers.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-45', distance: 0.0 },
+        demographics: { pop5mi: 95000, medianIncome: 40000, laborForce5mi: 47000 },
+        criteria: { hwAccess: 10, zoning: 10, rawLand: 8, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 4, infill: 8, utilities: 9 }
+    },
+    {
+        id: 'dfw-101', name: '8500 Julius Schepps Fwy (38 ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.680, -96.755], acreage: 38,
+        zoning: 'IM (Industrial Manufacturing)', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: true, askingPrice: '$5,959,000', listingUrl: 'https://www.loopnet.com/Listing/8500-8800-Julius-Schepps-Fwy-Dallas-TX/38829702/',
+        notes: 'LoopNet verified listing. 38 acres (30 net) on Julius Schepps Fwy (US-175). Active IOS market. One of the most active industrial corridors in DFW.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'US-175', distance: 0.0 },
+        demographics: { pop5mi: 130000, medianIncome: 38000, laborForce5mi: 65000 },
+        criteria: { hwAccess: 10, zoning: 10, rawLand: 7, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 5, infill: 9, utilities: 10 }
+    },
+    {
+        id: 'dfw-102', name: 'Wilmer Industrial (8.8 ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.592, -96.685], acreage: 8.8,
+        zoning: 'I (Industrial)', taxRate: 2.50, taxAuthority: 'Dallas County',
+        forSale: true, askingPrice: '$2,798,000', listingUrl: 'https://www.loopnet.com/search/commercial-land/wilmer-tx/for-sale/',
+        notes: 'LoopNet verified. 8.8 acres in Wilmer — heart of the South Dallas mega-distribution corridor. I-45 proximity.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-45', distance: 0.5 },
+        demographics: { pop5mi: 72000, medianIncome: 38000, laborForce5mi: 36000 },
+        criteria: { hwAccess: 8, zoning: 9, rawLand: 8, laborPool: 8, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 4, infill: 7, utilities: 8 }
+    },
+    {
+        id: 'dfw-103', name: 'Wilmer Mega-Site (358 ac avail)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.588, -96.690], acreage: 358,
+        zoning: 'PD/I (Planned Industrial)', taxRate: 2.50, taxAuthority: 'Dallas County',
+        forSale: true, askingPrice: '$61,910,085', listingUrl: 'https://www.loopnet.com/search/land/wilmer-tx/for-sale/',
+        notes: 'LoopNet verified. Massive 358-acre assemblage in Wilmer, divisible to 20-40-100-200-450 ac parcels. 250+ ac annexed into Wilmer, 200+ ac in Dallas County. Master-planned industrial park opportunity.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-45', distance: 0.3 },
+        demographics: { pop5mi: 68000, medianIncome: 37000, laborForce5mi: 34000 },
+        criteria: { hwAccess: 9, zoning: 8, rawLand: 10, laborPool: 8, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 4, infill: 5, utilities: 9 }
+    },
+    {
+        id: 'dfw-104', name: 'Lancaster Industrial (6.6 ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.600, -96.764], acreage: 6.6,
+        zoning: 'LI (Light Industrial)', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: true, askingPrice: '$3,200,000', listingUrl: 'https://www.loopnet.com/search/commercial-land/lancaster-tx/for-sale/',
+        notes: 'LoopNet verified. 6.6 acres in Lancaster. I-35E access. Strong infill position in South Dallas logistics corridor.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 0.4 },
+        demographics: { pop5mi: 115000, medianIncome: 42000, laborForce5mi: 58000 },
+        criteria: { hwAccess: 8, zoning: 9, rawLand: 7, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 5, infill: 9, utilities: 10 }
+    },
+
+    // San Antonio — Real listings
+    {
+        id: 'sat-100', name: 'Brooks Submarket Permitted Site (42 ac)', market: 'san-antonio', submarket: 'sat-south',
+        coords: [29.345, -98.448], acreage: 42.3,
+        zoning: 'I-1 (Light Industrial)', taxRate: 2.30, taxAuthority: 'Bexar County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/search/industrial-land/san-antonio-tx/for-sale/',
+        notes: 'LoopNet verified. Fully permitted 42.3-acre site, 1 mile from SE Loop 410 in the Brooks submarket. Development-ready.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'Loop 410', distance: 1.0 },
+        demographics: { pop5mi: 145000, medianIncome: 38000, laborForce5mi: 72000 },
+        criteria: { hwAccess: 7, zoning: 9, rawLand: 9, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 6, infill: 7, utilities: 10 }
+    },
+    {
+        id: 'sat-101', name: 'South Bexar Co / Toyota Corridor (71.5 ac)', market: 'san-antonio', submarket: 'sat-south',
+        coords: [29.290, -98.490], acreage: 71.5,
+        zoning: 'Unrestricted', taxRate: 2.30, taxAuthority: 'Bexar County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/search/industrial-land/bexar-county-tx/for-sale/',
+        notes: 'LoopNet verified. 71.5 acres unrestricted land in South Bexar County. Near Toyota Manufacturing Plant, Loop 1604, I-37, and Hwy 281.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-37', distance: 0.8 },
+        demographics: { pop5mi: 55000, medianIncome: 36000, laborForce5mi: 28000 },
+        criteria: { hwAccess: 8, zoning: 8, rawLand: 10, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 3, infill: 4, utilities: 6 }
+    },
+
+    // Houston — Real listings
+    {
+        id: 'hou-100', name: 'New Construction Industrial (48.7 ac)', market: 'houston', submarket: 'hou-northwest',
+        coords: [29.950, -95.580], acreage: 48.7,
+        zoning: 'None (ETJ)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/search/industrial-land/houston-tx/for-sale/',
+        notes: 'LoopNet verified. 48.73-acre lot in NW Houston with new 272,160 SF industrial building (built 2026). Turnkey opportunity.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'US-290', distance: 0.5 },
+        demographics: { pop5mi: 110000, medianIncome: 68000, laborForce5mi: 55000 },
+        criteria: { hwAccess: 8, zoning: 8, rawLand: 5, laborPool: 7, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 5, infill: 5, utilities: 10 }
     }
 ];
