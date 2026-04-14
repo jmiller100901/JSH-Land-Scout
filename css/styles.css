@@ -318,6 +318,8 @@ html, body { height: 100%; font-family: 'Inter', system-ui, sans-serif; backgrou
 }
 
 /* ===== Leaflet Overrides ===== */
+.leaflet-control-zoom { margin-top: 60px !important; }
+
 .leaflet-popup-content-wrapper {
     background: #151b2e !important;
     color: #e2e8f0 !important;
@@ -327,6 +329,71 @@ html, body { height: 100%; font-family: 'Inter', system-ui, sans-serif; backgrou
 }
 .leaflet-popup-tip { background: #151b2e !important; }
 .leaflet-popup-content { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; }
+
+/* Submarket hover tooltip */
+.submarket-tooltip {
+    background: rgba(10, 15, 26, 0.95) !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #2a3352 !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.8rem !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+    max-width: 280px !important;
+}
+.submarket-tooltip .leaflet-tooltip-arrow { display: none; }
+.submarket-tooltip .tt-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+.submarket-tooltip .tt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+.submarket-tooltip .tt-label { color: #64748b; font-size: 0.7rem; text-transform: uppercase; }
+.submarket-tooltip .tt-val { font-weight: 500; }
+.submarket-tooltip .tt-link { display: block; margin-top: 8px; color: #3b82f6; font-size: 0.75rem; }
+
+/* City labels on map */
+.city-label {
+    color: #94a3b8 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-shadow: 0 0 6px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.7) !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Submarket health legend */
+#health-legend {
+    position: absolute;
+    bottom: 6rem; left: 1rem;
+    z-index: 999;
+    background: rgba(10, 15, 26, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+#health-legend h4 { font-size: 0.75rem; color: #64748b; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.health-legend-row { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #94a3b8; margin-top: 3px; }
+.health-legend-swatch { width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.15); }
+
+/* Demographics section in site panel */
+.demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+.demo-item {
+    background: #151b2e;
+    border-radius: 6px;
+    padding: 0.65rem;
+    text-align: center;
+}
+.demo-item .label { font-size: 0.65rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+.demo-item .value { font-size: 1rem; font-weight: 600; margin-top: 0.15rem; }
 
 /* Custom marker */
 .site-marker {
