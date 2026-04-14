@@ -538,26 +538,42 @@
 
         let html = '';
 
+        // Deal-killer warnings
+        const killers = getDealKillers(site);
+        if (killers.length > 0) {
+            html += '<div style="background:rgba(239,68,68,0.12);border:1px solid #ef4444;border-radius:8px;padding:0.65rem;margin-bottom:1rem;">';
+            html += '<div style="font-weight:600;color:#ef4444;font-size:0.8rem;margin-bottom:0.3rem;">DEAL-KILLER FLAGS</div>';
+            killers.forEach(k => { html += `<div style="font-size:0.8rem;color:#fca5a5;">${k.icon} ${k.label}</div>`; });
+            html += '</div>';
+        }
+
         // Score bar
         html += `<div class="site-score-bar">
             <div class="score-circle" style="background:${color}">${score}</div>
             <div>
                 <div style="font-weight:600;font-size:1rem;">Composite Score</div>
-                <div class="score-label">Weighted across 10 criteria</div>
+                <div class="score-label">18 criteria · NAIOP/Prologis framework</div>
             </div>
         </div>`;
 
-        // Criteria breakdown
+        // Criteria breakdown by tier
+        const migrated = migrateCriteria(site.criteria);
+        let currentTier = 0;
         html += '<div class="criteria-list">';
         for (const [key, cfg] of Object.entries(CRITERIA_CONFIG)) {
-            const val = site.criteria[key] || 0;
+            if (cfg.tier !== currentTier) {
+                currentTier = cfg.tier;
+                const tierLabel = getTierLabel(cfg.tier);
+                html += `<div style="font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;padding:0.5rem 0 0.2rem;border-top:1px solid #1a2035;margin-top:0.3rem;">${tierLabel} (Tier ${cfg.tier})</div>`;
+            }
+            const val = migrated[key] || 0;
             const cls = criteriaScoreClass(val);
             let dots = '';
             for (let i = 1; i <= 10; i++) {
                 dots += `<div class="criteria-dot ${i <= val ? 'filled ' + cls : ''}"></div>`;
             }
             html += `<div class="criteria-row">
-                <span class="criteria-name">${cfg.label}</span>
+                <span class="criteria-name" title="${cfg.desc}">${cfg.label} <span style="color:#475569;font-size:0.65rem;">(${cfg.weight})</span></span>
                 <div class="criteria-score">${dots}</div>
             </div>`;
         }
