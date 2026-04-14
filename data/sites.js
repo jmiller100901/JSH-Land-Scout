@@ -172,7 +172,7 @@ const LAND_SITES = [
         criteria: { hwAccess: 7, zoning: 9, rawLand: 8, laborPool: 8, subFundamentals: 8, cityGrowth: 10, bizFriendly: 8, airportProx: 6, infill: 10, utilities: 10 }
     },
     {
-        id: 'atx-004', name: 'Lockhart I-130 Logistics Site', market: 'austin', submarket: 'atx-san-marcos',
+        id: 'atx-004', name: 'Lockhart I-130 Logistics Site', market: 'austin', submarket: 'atx-hays',
         coords: [29.90, -97.68], acreage: 75,
         zoning: 'HI (Heavy Industrial)', taxRate: 2.15, taxAuthority: 'Caldwell County',
         forSale: true, askingPrice: '$4,500,000', listingUrl: 'https://www.loopnet.com/search/land/lockhart-tx/for-sale/',
@@ -183,7 +183,7 @@ const LAND_SITES = [
         criteria: { hwAccess: 8, zoning: 9, rawLand: 10, laborPool: 5, subFundamentals: 6, cityGrowth: 8, bizFriendly: 8, airportProx: 3, infill: 3, utilities: 7 }
     },
     {
-        id: 'atx-005', name: 'Pflugerville/SH-130 Pad', market: 'austin', submarket: 'atx-north',
+        id: 'atx-005', name: 'Pflugerville/SH-130 Pad', market: 'austin', submarket: 'atx-northeast',
         coords: [30.44, -97.60], acreage: 30,
         zoning: 'LI (Light Industrial)', taxRate: 2.22, taxAuthority: 'Travis/Williamson',
         forSale: true, askingPrice: '$2,700,000', listingUrl: null,
@@ -365,7 +365,7 @@ const LAND_SITES = [
         criteria: { hwAccess: 8, zoning: 9, rawLand: 7, laborPool: 7, subFundamentals: 7, cityGrowth: 9, bizFriendly: 9, airportProx: 6, infill: 8, utilities: 9 }
     },
     {
-        id: 'clt-003', name: 'Mooresville Commerce Park Pad', market: 'charlotte', submarket: 'clt-mooresville',
+        id: 'clt-003', name: 'Mooresville Commerce Park Pad', market: 'charlotte', submarket: 'clt-iredell',
         coords: [35.58, -80.82], acreage: 50,
         zoning: 'HB (Highway Business)', taxRate: 0.68, taxAuthority: 'Iredell County',
         forSale: true, askingPrice: '$2,500,000', listingUrl: 'https://www.loopnet.com/search/land/mooresville-nc/for-sale/',
@@ -398,7 +398,7 @@ const LAND_SITES = [
         criteria: { hwAccess: 8, zoning: 9, rawLand: 9, laborPool: 7, subFundamentals: 7, cityGrowth: 9, bizFriendly: 9, airportProx: 5, infill: 6, utilities: 8 }
     },
     {
-        id: 'clt-006', name: 'Mount Holly/I-85 SW Site', market: 'charlotte', submarket: 'clt-southwest',
+        id: 'clt-006', name: 'Mount Holly/I-85 SW Site', market: 'charlotte', submarket: 'clt-gaston',
         coords: [35.28, -81.03], acreage: 55,
         zoning: 'I-2 (General Industrial)', taxRate: 0.99, taxAuthority: 'Gaston County',
         forSale: false, askingPrice: null, listingUrl: null,
@@ -490,6 +490,216 @@ const LAND_SITES = [
         nearestHighway: { name: 'I-37', distance: 0.8 },
         demographics: { pop5mi: 55000, medianIncome: 36000, laborForce5mi: 28000 },
         criteria: { hwAccess: 8, zoning: 8, rawLand: 10, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 3, infill: 4, utilities: 6 }
+    },
+
+    // ===== CREATIVE INDUSTRIAL SITE OPPORTUNITIES (April 2026) =====
+
+    // --- Austin Creative Sites ---
+    {
+        id: 'atx-100', name: 'Lytton Springs Ag Tract (387 ac)', market: 'austin', submarket: 'atx-round-rock',
+        coords: [30.00, -97.57], acreage: 387,
+        zoning: 'Agricultural (Hutto ETJ)', taxRate: 2.10, taxAuthority: 'Williamson County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.landsearch.com/properties/lytton-springs-tx',
+        notes: 'CREATIVE: Agricultural land along SH-130 expansion corridor. 387 contiguous acres with frontage on Lytton Lane and access to SH-21 and SH-130. Farm-leased land in Hutto ISD with existing water well and Encore electric. Contiguous tracts this size are nearly impossible to assemble in this corridor. Creek corridor provides natural drainage. In the direct path of Austin eastward growth — Samsung Taylor, Dell Round Rock nearby.',
+        utilities: { water: false, sewer: false, gas: false, electric: true, fiber: false },
+        nearestHighway: { name: 'SH-130', distance: 2.5 },
+        demographics: { pop5mi: 25000, medianIncome: 62000, laborForce5mi: 12000 },
+        criteria: { hwAccess: 7, zoning: 6, rawLand: 10, laborPool: 5, subFundamentals: 8, cityGrowth: 9, bizFriendly: 8, airportProx: 3, infill: 2, utilities: 3 }
+    },
+    {
+        id: 'atx-101', name: 'East Yager Lane ETJ Site (20 ac)', market: 'austin', submarket: 'atx-northeast',
+        coords: [30.41, -97.64], acreage: 20,
+        zoning: 'None (Austin ETJ)', taxRate: 2.20, taxAuthority: 'Travis County',
+        forSale: true, askingPrice: null, listingUrl: 'https://invest.jll.com/us/en/listings/land/east-yager-land',
+        notes: 'CREATIVE: ETJ land with NO zoning restrictions. 20-acre site on Yager Lane corridor, 0.5 mi south of Parmer Lane. Between Toll 130, US-290, and I-35. Near Apple, Samsung, Dell, GM, PayPal campuses. JLL-marketed. ETJ status eliminates base zoning constraints — industrial use fully permissible without rezoning. NE Austin tech/industrial node.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'US-290', distance: 1.5 },
+        demographics: { pop5mi: 95000, medianIncome: 72000, laborForce5mi: 48000 },
+        criteria: { hwAccess: 7, zoning: 9, rawLand: 8, laborPool: 8, subFundamentals: 9, cityGrowth: 10, bizFriendly: 9, airportProx: 4, infill: 7, utilities: 7 }
+    },
+    {
+        id: 'atx-102', name: 'Del Valle/Tesla Corridor ETJ (40 ac)', market: 'austin', submarket: 'atx-southeast',
+        coords: [30.17, -97.62], acreage: 40,
+        zoning: 'None (Travis Co ETJ)', taxRate: 2.15, taxAuthority: 'Travis County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.homes.com/del-valle-tx/acreage/',
+        notes: 'CREATIVE: Unrestricted ETJ land in Del Valle near Tesla Gigafactory. ~40 acres of formerly agricultural land in rapidly urbanizing SE Travis County. Austin-Bergstrom Airport nearby. SH-130 and FM 973 access. Area is transitioning from rural to industrial/logistics — Hines just closed on 1,400 acres for Mirador master-plan nearby. No zoning = no rezoning risk. Tesla supply-chain tenants are the target user.',
+        utilities: { water: true, sewer: false, gas: false, electric: true, fiber: false },
+        nearestHighway: { name: 'SH-130', distance: 1.0 },
+        demographics: { pop5mi: 45000, medianIncome: 48000, laborForce5mi: 22000 },
+        criteria: { hwAccess: 8, zoning: 9, rawLand: 9, laborPool: 7, subFundamentals: 9, cityGrowth: 10, bizFriendly: 9, airportProx: 8, infill: 4, utilities: 5 }
+    },
+
+    // --- San Antonio Creative Sites ---
+    {
+        id: 'sat-102', name: 'Southport/Applewhite Industrial (172 ac)', market: 'san-antonio', submarket: 'sat-south',
+        coords: [29.27, -98.52], acreage: 172,
+        zoning: 'MI-1 (Manufacturing/Industrial)', taxRate: 2.30, taxAuthority: 'Bexar County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/Listing/18062811/Applewhite-Road-San-Antonio-TX/',
+        notes: 'CREATIVE: Massive 172-acre parcel in Southport Industrial Business Park, directly across from Toyota Manufacturing Plant on Applewhite Rd. Already MI-1 zoned with all utilities to site. Inside tracts ~$60K/ac, outside tracts ~$32-38K/ac. Toyota supplier ecosystem is the built-in tenant pipeline. I-37 and Loop 1604 access.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-37', distance: 2.0 },
+        demographics: { pop5mi: 48000, medianIncome: 35000, laborForce5mi: 24000 },
+        criteria: { hwAccess: 7, zoning: 10, rawLand: 10, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 3, infill: 3, utilities: 10 }
+    },
+    {
+        id: 'sat-103', name: 'US-181 SE San Antonio Ag Tract (83 ac)', market: 'san-antonio', submarket: 'sat-east',
+        coords: [29.34, -98.32], acreage: 83.6,
+        zoning: 'Agricultural/Unrestricted', taxRate: 2.25, taxAuthority: 'Bexar County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.landwatch.com/texas-land-for-sale/san-antonio-region/farms-ranches',
+        notes: 'CREATIVE: 83.6-acre ag tract with US-181 highway frontage and FM 775 access. Currently ranch/agricultural use with ag exemption keeping taxes minimal. Highway frontage makes industrial conversion straightforward. Located in the southeast growth path between SA and the Eagle Ford Shale supply chain corridor. No single-family adjacency issues.',
+        utilities: { water: false, sewer: false, gas: false, electric: true, fiber: false },
+        nearestHighway: { name: 'US-181', distance: 0.1 },
+        demographics: { pop5mi: 32000, medianIncome: 42000, laborForce5mi: 16000 },
+        criteria: { hwAccess: 9, zoning: 7, rawLand: 10, laborPool: 6, subFundamentals: 6, cityGrowth: 7, bizFriendly: 9, airportProx: 3, infill: 2, utilities: 3 }
+    },
+    {
+        id: 'sat-104', name: 'IH-10/Guadalupe Co Frontage (70 ac)', market: 'san-antonio', submarket: 'sat-guadalupe',
+        coords: [29.52, -98.15], acreage: 70,
+        zoning: 'Unrestricted (Guadalupe Co)', taxRate: 2.10, taxAuthority: 'Guadalupe County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.landandfarm.com/search/texas/san-antonio-land-for-sale/',
+        notes: 'CREATIVE: ~70 acres in Guadalupe County with ~1,850 ft of IH-10 frontage. Unrestricted county land — no zoning hurdles. I-10 is the primary east-west logistics artery (SA to Houston). County is business-friendly with lower tax burden than Bexar. Amazon, Caterpillar, and other major distributors have already established in the I-10 east corridor.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-10', distance: 0.1 },
+        demographics: { pop5mi: 42000, medianIncome: 56000, laborForce5mi: 21000 },
+        criteria: { hwAccess: 10, zoning: 9, rawLand: 9, laborPool: 6, subFundamentals: 8, cityGrowth: 8, bizFriendly: 10, airportProx: 3, infill: 3, utilities: 6 }
+    },
+
+    // --- Charlotte Creative Sites ---
+    {
+        id: 'clt-100', name: 'Gastonia I-85/Shannon Bradley Rd Industrial (7 ac)', market: 'charlotte', submarket: 'clt-gaston',
+        coords: [35.24, -81.22], acreage: 7.1,
+        zoning: 'I-2 (Heavy Industrial)', taxRate: 1.05, taxAuthority: 'Gaston County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.crexi.com/properties/NC/Charlotte/Land',
+        notes: 'CREATIVE: 7.1 acres already zoned I-2 in western Gastonia, between I-85 and US-74. Smaller parcel but fully entitled — no rezoning timeline. Gastonia is Charlotte metro\'s emerging industrial play with lower land costs than Airport/West submarket. Straight shot to Greenville and Atlanta via I-85. Good for last-mile or small-bay industrial.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-85', distance: 0.8 },
+        demographics: { pop5mi: 68000, medianIncome: 40000, laborForce5mi: 34000 },
+        criteria: { hwAccess: 9, zoning: 10, rawLand: 6, laborPool: 8, subFundamentals: 7, cityGrowth: 7, bizFriendly: 8, airportProx: 4, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'clt-101', name: 'Concord I-85 Frontage Tract (26 ac)', market: 'charlotte', submarket: 'clt-northeast',
+        coords: [35.38, -80.63], acreage: 26,
+        zoning: 'Commercial/Transitional', taxRate: 0.95, taxAuthority: 'Cabarrus County',
+        forSale: true, askingPrice: '$2,240,000', listingUrl: 'https://www.landsearch.com/commercial/concord-nc',
+        notes: 'CREATIVE: 26 acres with direct I-85 frontage listed at $2.24M (~$86K/ac). Concord is 20 min NE of Charlotte with excellent highway access and available land — a "gold mine" per local brokers. Commercial zoning is transitional to industrial in this corridor. Near Charlotte Motor Speedway industrial cluster. Lower land cost than core Charlotte submarkets.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-85', distance: 0.1 },
+        demographics: { pop5mi: 82000, medianIncome: 52000, laborForce5mi: 41000 },
+        criteria: { hwAccess: 10, zoning: 7, rawLand: 9, laborPool: 8, subFundamentals: 8, cityGrowth: 8, bizFriendly: 8, airportProx: 5, infill: 5, utilities: 9 }
+    },
+    {
+        id: 'clt-102', name: 'Mooresville I-77/Hwy 21 Site (27 ac)', market: 'charlotte', submarket: 'clt-iredell',
+        coords: [35.58, -80.82], acreage: 27,
+        zoning: 'RA (Residential Agricultural)', taxRate: 0.90, taxAuthority: 'Iredell County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.landsearch.com/properties/mooresville-nc',
+        notes: 'CREATIVE: 27 acres at I-77 Exit 33 off Hwy 21 in Mooresville. Currently zoned RA but Iredell County is actively courting industrial/logistics users — rezoning is feasible. I-77 is the Charlotte-to-Virginia logistics spine. Lowe\'s HQ and NASCAR industry provide strong labor base. Iredell EDC promotes the area for logistics and distribution.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-77', distance: 0.3 },
+        demographics: { pop5mi: 55000, medianIncome: 58000, laborForce5mi: 28000 },
+        criteria: { hwAccess: 9, zoning: 5, rawLand: 9, laborPool: 7, subFundamentals: 7, cityGrowth: 8, bizFriendly: 8, airportProx: 3, infill: 4, utilities: 6 }
+    },
+    {
+        id: 'clt-103', name: 'Airport/Intermodal Westinghouse Blvd (12 ac)', market: 'charlotte', submarket: 'clt-airport-west',
+        coords: [35.19, -80.98], acreage: 12,
+        zoning: 'I-1 (Light Industrial)', taxRate: 1.10, taxAuthority: 'Mecklenburg County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.crexi.com/properties/NC/Charlotte/Industrial-Land',
+        notes: 'CREATIVE: ~12 acres on Westinghouse Blvd near CLT Airport and Norfolk Southern Intermodal Facility (200-acre terminal). Intermodal-adjacent land is the highest-demand industrial play in Charlotte. Airport + rail + I-85 + I-485 access in one location. Tight supply — this corridor rarely has parcels this size. Premium rents for intermodal-proximate product.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-485', distance: 0.5 },
+        demographics: { pop5mi: 110000, medianIncome: 45000, laborForce5mi: 55000 },
+        criteria: { hwAccess: 9, zoning: 9, rawLand: 6, laborPool: 9, subFundamentals: 9, cityGrowth: 9, bizFriendly: 8, airportProx: 10, infill: 9, utilities: 10 }
+    },
+
+    // --- DFW Creative Sites ---
+    {
+        id: 'dfw-200', name: 'Dowdy Ferry/I-20 Grow South (20 ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.685, -96.645], acreage: 20,
+        zoning: 'IR (Industrial Research)', taxRate: 2.45, taxAuthority: 'Dallas County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/Listing/2040-Dowdy-Ferry-Rd-Dallas-TX/24425048/',
+        notes: 'CREATIVE: Dallas "Grow South" initiative area — city actively wants industrial investment here with tax incentives and streamlined permitting. I-20 frontage + Hwy 175 interchange dual access. Already zoned IR. Political tailwind most developers ignore.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-20', distance: 0.1 },
+        demographics: { pop5mi: 110000, medianIncome: 38000, laborForce5mi: 55000 },
+        criteria: { hwAccess: 9, zoning: 9, rawLand: 8, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 10, airportProx: 4, infill: 8, utilities: 9 }
+    },
+    {
+        id: 'dfw-201', name: 'Royse City I-30 East Frontier (139 ac)', market: 'dfw', submarket: 'dfw-east-dallas',
+        coords: [32.850, -96.320], acreage: 139,
+        zoning: 'Agricultural', taxRate: 2.38, taxAuthority: 'Rockwall County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.redfin.com/city/30792/TX/Royse-City/land',
+        notes: 'CREATIVE: Ag-priced land at the leading edge of DFW eastward industrial expansion. 75K VPD on I-30, 15K on Hwy 276. I-30 East corridor (Forney→Royse City→Terrell) is the next frontier after I-20/I-35 saturation. Small-town govt welcomes commercial tax base. Large contiguous tracts nearly impossible to find closer in.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-30', distance: 0.5 },
+        demographics: { pop5mi: 35000, medianIncome: 72000, laborForce5mi: 18000 },
+        criteria: { hwAccess: 9, zoning: 5, rawLand: 10, laborPool: 5, subFundamentals: 6, cityGrowth: 9, bizFriendly: 9, airportProx: 3, infill: 2, utilities: 5 }
+    },
+    {
+        id: 'dfw-202', name: 'Ferris/South Creek Adjacent (var ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.530, -96.660], acreage: 60,
+        zoning: 'Agricultural (Ferris ETJ)', taxRate: 2.50, taxAuthority: 'Ellis County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'CREATIVE: "Buy next to the big guy" play. Cawley Partners just acquired 5,200 acres here for mega data center + logistics campus. Their infrastructure investment (roads, power, water, fiber) de-risks adjacent parcels. UP intermodal terminal nearby. Future Loop 9 alignment runs through. You complement Cawley with smaller-bay industrial they wont build.',
+        utilities: { water: false, sewer: false, gas: false, electric: true, fiber: false },
+        nearestHighway: { name: 'I-45', distance: 1.5 },
+        demographics: { pop5mi: 28000, medianIncome: 48000, laborForce5mi: 14000 },
+        criteria: { hwAccess: 7, zoning: 5, rawLand: 10, laborPool: 6, subFundamentals: 7, cityGrowth: 9, bizFriendly: 9, airportProx: 3, infill: 2, utilities: 3 }
+    },
+    {
+        id: 'dfw-203', name: 'Waxahachie Data Center Corridor (600+ ac)', market: 'dfw', submarket: 'dfw-cedars-west',
+        coords: [32.390, -96.840], acreage: 600,
+        zoning: 'Agricultural', taxRate: 2.50, taxAuthority: 'Ellis County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.cbre.com/properties/properties-for-lease/land/details/US-SMPL-124710/',
+        notes: 'CREATIVE: CBRE-marketed data center land south of Dallas. Access to robust fiber network and hundreds of MW of power capacity. Data center boom brings utility infrastructure that industrial developers can piggyback on — you ride the infrastructure wave without paying for it. Flat, hazard-free, no floodplain.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-35E', distance: 2.0 },
+        demographics: { pop5mi: 22000, medianIncome: 55000, laborForce5mi: 11000 },
+        criteria: { hwAccess: 6, zoning: 5, rawLand: 10, laborPool: 4, subFundamentals: 6, cityGrowth: 8, bizFriendly: 9, airportProx: 2, infill: 1, utilities: 7 }
+    },
+
+    // --- Houston Creative Sites ---
+    {
+        id: 'hou-200', name: 'Brookshire I-10/Peach Ridge (28 ac)', market: 'houston', submarket: 'hou-west',
+        coords: [29.786, -95.952], acreage: 28,
+        zoning: 'None (Waller County)', taxRate: 2.22, taxAuthority: 'Waller County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.crexi.com/properties/TX/Brookshire/Land',
+        notes: 'CREATIVE: No-zoning Waller County land with dual I-10 and Peach Ridge frontage. Adjacent to Amazon, Costco, Rooms To Go, and Ross DCs. Tesla Megapack facility under construction nearby. Proven industrial cluster validates location. No zoning = fastest entitlement timeline. Tesla power upgrades benefit all neighbors.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-10', distance: 0.0 },
+        demographics: { pop5mi: 35000, medianIncome: 58000, laborForce5mi: 18000 },
+        criteria: { hwAccess: 10, zoning: 9, rawLand: 9, laborPool: 6, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 3, infill: 6, utilities: 6 }
+    },
+    {
+        id: 'hou-201', name: 'Monroe City Farms (640 ac)', market: 'houston', submarket: 'hou-baytown',
+        coords: [29.740, -94.680], acreage: 640,
+        zoning: 'Agricultural (Chambers County)', taxRate: 1.95, taxAuthority: 'Chambers County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.land.com/property/640-acres-in-chambers-county-texas/24314278/',
+        notes: 'CREATIVE: Working rice farm priced as ag land — 640 acres, 570 FSA-certified farmable, 2.2 mi south of I-10 with 1+ mi paved road frontage. Chambers County has minimal land use regulation. Internal road network and cross-fencing already in place. Flat cleared land = minimal site prep. Next ring out on Houston industrial expansion at a fraction of Harris County pricing.',
+        utilities: { water: true, sewer: false, gas: false, electric: true, fiber: false },
+        nearestHighway: { name: 'I-10', distance: 2.2 },
+        demographics: { pop5mi: 12000, medianIncome: 52000, laborForce5mi: 6000 },
+        criteria: { hwAccess: 6, zoning: 7, rawLand: 10, laborPool: 4, subFundamentals: 6, cityGrowth: 7, bizFriendly: 10, airportProx: 2, infill: 1, utilities: 3 }
+    },
+    {
+        id: 'hou-202', name: 'Mont Belvieu FM 1409 ETJ (26 ac)', market: 'houston', submarket: 'hou-baytown',
+        coords: [29.850, -94.870], acreage: 26,
+        zoning: 'None (Baytown ETJ)', taxRate: 2.20, taxAuthority: 'Chambers County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/search/land/mont-belvieu-tx/for-sale/',
+        notes: 'CREATIVE: ETJ land WITH city utilities — the holy grail. Newly completed FM 1409 Extension provides fresh road access not yet priced into land values. Mont Belvieu city water/sewer available. Petrochemical complex proximity = built-in demand for support services, fabrication shops, laydown yards. Recession-resilient tenant base.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'I-10', distance: 1.5 },
+        demographics: { pop5mi: 42000, medianIncome: 62000, laborForce5mi: 21000 },
+        criteria: { hwAccess: 7, zoning: 8, rawLand: 9, laborPool: 9, subFundamentals: 8, cityGrowth: 7, bizFriendly: 10, airportProx: 3, infill: 5, utilities: 8 }
+    },
+    {
+        id: 'hou-203', name: 'I-10/Jordan Ranch Blvd (10 ac)', market: 'houston', submarket: 'hou-west',
+        coords: [29.780, -95.930], acreage: 10,
+        zoning: 'None (Brookshire)', taxRate: 2.22, taxAuthority: 'Waller County',
+        forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/Listing/SWC-I-10-Jordan-Ranch-blvd-Brookshire-TX/30015533/',
+        notes: 'CREATIVE: I-10 frontage at residential/industrial transition zone. Near Buc-ees (highest traffic I-10 West retail node) and master-planned communities (Jordan Ranch, Cane Island). Rooftop growth creates last-mile delivery demand at your doorstep. Smaller tract ideal for shallow-bay, rear-load spec targeting e-commerce fulfillment.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-10', distance: 0.0 },
+        demographics: { pop5mi: 45000, medianIncome: 82000, laborForce5mi: 22000 },
+        criteria: { hwAccess: 10, zoning: 8, rawLand: 8, laborPool: 5, subFundamentals: 7, cityGrowth: 10, bizFriendly: 10, airportProx: 3, infill: 6, utilities: 10 }
     },
 
     // Houston — Real listings

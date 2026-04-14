@@ -91,7 +91,12 @@ const INDUSTRIAL_STATS = {
         newSupply: 2000000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
 
-    // ===== AUSTIN =====
+    // ===== AUSTIN (new IDs matching Colliers/CBRE definitions) =====
+    'atx-northeast': {
+        inventory: 32.5, vacancy: 8.2, vacancyDelta: 2.0,
+        absorption: 1400000, avgRent: 10.50, rentDelta: -1.5,
+        newSupply: 3200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    },
     'atx-southeast': {
         inventory: 28.5, vacancy: 9.8, vacancyDelta: 3.2,
         absorption: 1200000, avgRent: 9.50, rentDelta: -2.5,
@@ -102,42 +107,52 @@ const INDUSTRIAL_STATS = {
         absorption: 800000, avgRent: 10.25, rentDelta: -1.8,
         newSupply: 2200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'atx-north': {
-        inventory: 18.3, vacancy: 7.2, vacancyDelta: 1.5,
-        absorption: 600000, avgRent: 11.00, rentDelta: -0.5,
-        newSupply: 1500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
-    },
-    'atx-round-rock': {
-        inventory: 15.8, vacancy: 10.5, vacancyDelta: 4.0,
-        absorption: 900000, avgRent: 9.80, rentDelta: -3.0,
-        newSupply: 2800000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
-    },
     'atx-south': {
         inventory: 12.5, vacancy: 6.5, vacancyDelta: 0.8,
         absorption: 500000, avgRent: 8.50, rentDelta: 1.0,
         newSupply: 800000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'atx-southwest': {
-        inventory: 8.2, vacancy: 5.8, vacancyDelta: 0.2,
-        absorption: 300000, avgRent: 10.50, rentDelta: 0.5,
-        newSupply: 400000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    'atx-north-central': {
+        inventory: 15.8, vacancy: 5.2, vacancyDelta: -0.3,
+        absorption: 400000, avgRent: 13.50, rentDelta: 1.5,
+        newSupply: 200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
     'atx-northwest': {
-        inventory: 14.6, vacancy: 8.0, vacancyDelta: 1.8,
-        absorption: 700000, avgRent: 10.00, rentDelta: -1.2,
-        newSupply: 1800000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+        inventory: 8.2, vacancy: 6.8, vacancyDelta: 0.5,
+        absorption: 300000, avgRent: 11.00, rentDelta: 0.2,
+        newSupply: 400000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'atx-san-marcos': {
+    'atx-round-rock': {
+        inventory: 18.5, vacancy: 10.5, vacancyDelta: 4.0,
+        absorption: 1100000, avgRent: 9.80, rentDelta: -3.0,
+        newSupply: 3500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    },
+    'atx-hays': {
         inventory: 8.9, vacancy: 12.0, vacancyDelta: 5.0,
         absorption: 400000, avgRent: 7.50, rentDelta: -4.0,
         newSupply: 2000000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-
-    // ===== SAN ANTONIO =====
-    'sat-northeast': {
-        inventory: 22.5, vacancy: 7.5, vacancyDelta: 1.2,
-        absorption: 800000, avgRent: 6.80, rentDelta: -0.5,
+    'atx-far-northeast': {
+        inventory: 5.2, vacancy: 14.0, vacancyDelta: 6.0,
+        absorption: 200000, avgRent: 8.00, rentDelta: -3.5,
         newSupply: 1500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    },
+
+    // ===== SAN ANTONIO (new IDs matching Partners/CBRE definitions) =====
+    'sat-cbd': {
+        inventory: 15.5, vacancy: 5.8, vacancyDelta: -0.2,
+        absorption: 400000, avgRent: 5.80, rentDelta: 1.0,
+        newSupply: 300000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    },
+    'sat-north-central': {
+        inventory: 20.1, vacancy: 7.0, vacancyDelta: 0.8,
+        absorption: 600000, avgRent: 7.20, rentDelta: 0.5,
+        newSupply: 1000000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    },
+    'sat-northeast': {
+        inventory: 45.8, vacancy: 7.5, vacancyDelta: 1.2,
+        absorption: 2200000, avgRent: 6.80, rentDelta: -0.5,
+        newSupply: 3500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
     'sat-east': {
         inventory: 18.3, vacancy: 8.2, vacancyDelta: 1.8,
@@ -145,34 +160,24 @@ const INDUSTRIAL_STATS = {
         newSupply: 1200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
     'sat-south': {
-        inventory: 35.8, vacancy: 6.5, vacancyDelta: 0.5,
-        absorption: 1200000, avgRent: 5.50, rentDelta: 0.8,
-        newSupply: 2000000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+        inventory: 42.5, vacancy: 6.5, vacancyDelta: 0.5,
+        absorption: 1800000, avgRent: 5.50, rentDelta: 0.8,
+        newSupply: 2500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
     'sat-northwest': {
-        inventory: 15.2, vacancy: 9.0, vacancyDelta: 2.5,
-        absorption: 500000, avgRent: 7.20, rentDelta: -1.5,
+        inventory: 22.8, vacancy: 9.0, vacancyDelta: 2.5,
+        absorption: 700000, avgRent: 7.20, rentDelta: -1.5,
         newSupply: 1800000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'sat-west': {
-        inventory: 12.8, vacancy: 7.8, vacancyDelta: 1.0,
-        absorption: 400000, avgRent: 6.00, rentDelta: 0.2,
-        newSupply: 800000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    'sat-comal': {
+        inventory: 18.2, vacancy: 10.5, vacancyDelta: 3.8,
+        absorption: 600000, avgRent: 6.50, rentDelta: -2.0,
+        newSupply: 2200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'sat-central': {
-        inventory: 28.5, vacancy: 5.5, vacancyDelta: -0.3,
-        absorption: 700000, avgRent: 5.80, rentDelta: 1.2,
-        newSupply: 600000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
-    },
-    'sat-new-braunfels': {
-        inventory: 8.5, vacancy: 11.5, vacancyDelta: 4.5,
-        absorption: 300000, avgRent: 6.50, rentDelta: -2.0,
+    'sat-guadalupe': {
+        inventory: 13.2, vacancy: 8.8, vacancyDelta: 2.2,
+        absorption: 500000, avgRent: 7.00, rentDelta: -0.8,
         newSupply: 1500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
-    },
-    'sat-north-central': {
-        inventory: 20.1, vacancy: 7.0, vacancyDelta: 0.8,
-        absorption: 600000, avgRent: 6.20, rentDelta: 0.5,
-        newSupply: 1000000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
 
     // ===== HOUSTON =====
@@ -232,11 +237,16 @@ const INDUSTRIAL_STATS = {
         newSupply: 3200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
 
-    // ===== CHARLOTTE =====
+    // ===== CHARLOTTE (new IDs matching Savills/CBRE definitions) =====
     'clt-airport-west': {
         inventory: 52.8, vacancy: 7.8, vacancyDelta: 2.0,
         absorption: 2200000, avgRent: 7.50, rentDelta: -1.2,
         newSupply: 3500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    },
+    'clt-cbd': {
+        inventory: 5.2, vacancy: 4.5, vacancyDelta: -0.5,
+        absorption: 100000, avgRent: 9.50, rentDelta: 2.0,
+        newSupply: 0, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
     'clt-north': {
         inventory: 35.2, vacancy: 8.5, vacancyDelta: 2.5,
@@ -248,34 +258,39 @@ const INDUSTRIAL_STATS = {
         absorption: 900000, avgRent: 7.20, rentDelta: -2.0,
         newSupply: 2200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
+    'clt-east': {
+        inventory: 18.8, vacancy: 7.0, vacancyDelta: 1.2,
+        absorption: 600000, avgRent: 7.50, rentDelta: -0.3,
+        newSupply: 900000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    },
     'clt-south': {
         inventory: 22.1, vacancy: 6.5, vacancyDelta: 0.8,
         absorption: 800000, avgRent: 8.00, rentDelta: 0.5,
         newSupply: 1200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'clt-southeast': {
-        inventory: 18.8, vacancy: 7.0, vacancyDelta: 1.2,
-        absorption: 600000, avgRent: 7.50, rentDelta: -0.3,
-        newSupply: 900000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    'clt-stateline': {
+        inventory: 38.5, vacancy: 8.8, vacancyDelta: 2.8,
+        absorption: 1600000, avgRent: 7.00, rentDelta: -1.8,
+        newSupply: 3200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'clt-southwest': {
-        inventory: 15.5, vacancy: 8.0, vacancyDelta: 1.8,
-        absorption: 500000, avgRent: 6.80, rentDelta: -1.0,
-        newSupply: 1500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    'clt-northwest': {
+        inventory: 12.5, vacancy: 7.5, vacancyDelta: 1.5,
+        absorption: 400000, avgRent: 6.80, rentDelta: -0.5,
+        newSupply: 800000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'clt-central': {
-        inventory: 32.5, vacancy: 5.2, vacancyDelta: -0.5,
-        absorption: 1000000, avgRent: 8.50, rentDelta: 1.2,
-        newSupply: 600000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    'clt-gaston': {
+        inventory: 15.8, vacancy: 6.2, vacancyDelta: 0.3,
+        absorption: 600000, avgRent: 5.80, rentDelta: 0.8,
+        newSupply: 1200000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'clt-mooresville': {
-        inventory: 12.8, vacancy: 10.0, vacancyDelta: 3.5,
-        absorption: 400000, avgRent: 6.50, rentDelta: -2.5,
-        newSupply: 1800000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    'clt-iredell': {
+        inventory: 18.5, vacancy: 9.5, vacancyDelta: 3.2,
+        absorption: 700000, avgRent: 6.50, rentDelta: -2.0,
+        newSupply: 2500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     },
-    'clt-gastonia': {
-        inventory: 10.2, vacancy: 6.8, vacancyDelta: 0.5,
-        absorption: 300000, avgRent: 5.80, rentDelta: 0.8,
-        newSupply: 500000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
+    'clt-rowan': {
+        inventory: 8.2, vacancy: 11.0, vacancyDelta: 4.5,
+        absorption: 300000, avgRent: 5.50, rentDelta: -3.0,
+        newSupply: 2180000, source: 'CBRE Q4 2025', asOf: 'Q4 2025'
     }
 };
