@@ -10,6 +10,7 @@
     let sitesLayer = null;
     let airportLayer = null;
     let cityLabelsLayer = null;
+    let parcelLayer = null;
     let activeBaseLayer = null;
 
     // ===== Tile Layers =====
@@ -550,11 +551,15 @@
         }
         html += `<a href="https://www.google.com/maps/@${site.coords[0]},${site.coords[1]},16z" target="_blank" class="site-link">📍 Google Maps</a>`;
         html += `<a href="https://earth.google.com/web/@${site.coords[0]},${site.coords[1]},0a,1000d,35y,0h,0t,0r" target="_blank" class="site-link">🌍 Google Earth</a>`;
+        html += `<a href="https://landglide.com/map#/${site.coords[0]}/${site.coords[1]}/17" target="_blank" class="site-link">📐 LandGlide Parcel</a>`;
         html += '</div>';
 
         document.getElementById('site-details').innerHTML = html;
         panel.classList.add('open');
         map.setView(site.coords, 14);
+
+        // Render parcel boundary if available
+        renderParcelBoundary(site);
     }
 
     function infoItem(label, value, fullWidth) {
@@ -564,9 +569,34 @@
         </div>`;
     }
 
+    // ===== Render Parcel Boundary =====
+    function renderParcelBoundary(site) {
+        if (parcelLayer) map.removeLayer(parcelLayer);
+        parcelLayer = null;
+
+        // If site has parcel geometry, render it
+        if (site.parcel && site.parcel.geometry) {
+            parcelLayer = L.geoJSON(site.parcel.geometry, {
+                style: {
+                    color: '#f59e0b',
+                    weight: 3,
+                    opacity: 1,
+                    fillColor: '#f59e0b',
+                    fillOpacity: 0.08,
+                    dashArray: '6, 4'
+                }
+            });
+            parcelLayer.addTo(map);
+
+            // Fit map to parcel bounds
+            map.fitBounds(parcelLayer.getBounds(), { padding: [60, 60], maxZoom: 17 });
+        }
+    }
+
     // ===== Close Panels =====
     function closePanels() {
         document.querySelectorAll('.side-panel').forEach(p => p.classList.remove('open'));
+        if (parcelLayer) { map.removeLayer(parcelLayer); parcelLayer = null; }
     }
 
     document.getElementById('panel-close').addEventListener('click', closePanels);
