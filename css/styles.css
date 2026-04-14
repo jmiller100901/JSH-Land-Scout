@@ -116,6 +116,76 @@ html, body { height: 100%; font-family: 'Inter', system-ui, sans-serif; backgrou
     width: 14px; height: 14px;
 }
 
+/* ===== Filter Panel ===== */
+#filter-panel {
+    position: absolute;
+    top: 52px; left: 0; right: 0;
+    z-index: 998;
+    background: rgba(10, 15, 26, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1e293b;
+    padding: 0.75rem 1rem;
+    display: none;
+}
+#filter-panel.open { display: block; }
+.filter-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+.filter-row:last-child { margin-bottom: 0; }
+.filter-group { display: flex; flex-direction: column; gap: 0.2rem; }
+.filter-group label {
+    font-size: 0.7rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.filter-group input, .filter-group select {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    min-width: 100px;
+}
+.filter-group input:focus, .filter-group select:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+.filter-apply-btn {
+    background: #3b82f6;
+    border: none;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.filter-apply-btn:hover { background: #2563eb; }
+.filter-clear-btn {
+    background: transparent;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+.filter-clear-btn:hover { background: #1e293b; }
+.filter-count {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-left: 0.5rem;
+}
+
 /* ===== Map ===== */
 #map-view { flex-direction: column; position: relative; }
 #map { flex: 1; width: 100%; z-index: 1; }

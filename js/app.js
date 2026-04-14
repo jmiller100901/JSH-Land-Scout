@@ -109,10 +109,76 @@
         applyToggles();
     }
 
+    // ===== Filter Panel Toggle =====
+    document.getElementById('btn-filters').addEventListener('click', () => {
+        document.getElementById('filter-panel').classList.toggle('open');
+    });
+
+    // ===== Apply Filters =====
+    document.getElementById('btn-apply-filters').addEventListener('click', () => {
+        loadSites(currentMarket);
+    });
+    document.getElementById('btn-clear-filters').addEventListener('click', () => {
+        document.getElementById('filter-acres-min').value = '';
+        document.getElementById('filter-acres-max').value = '';
+        document.getElementById('filter-score-min').value = '';
+        document.getElementById('filter-vacancy-max').value = '';
+        document.getElementById('filter-zoning').value = '';
+        document.getElementById('filter-status').value = '';
+        document.getElementById('filter-highway').value = '';
+        document.getElementById('filter-parcel').value = '';
+        document.getElementById('filter-count').textContent = '';
+        loadSites(currentMarket);
+    });
+
+    function getFilteredSites(marketKey) {
+        let sites = LAND_SITES.filter(s => s.market === marketKey);
+        const acresMin = parseFloat(document.getElementById('filter-acres-min').value) || 0;
+        const acresMax = parseFloat(document.getElementById('filter-acres-max').value) || Infinity;
+        const scoreMin = parseFloat(document.getElementById('filter-score-min').value) || 0;
+        const vacancyMax = parseFloat(document.getElementById('filter-vacancy-max').value) || Infinity;
+        const zoningFilter = document.getElementById('filter-zoning').value;
+        const statusFilter = document.getElementById('filter-status').value;
+        const hwFilter = parseFloat(document.getElementById('filter-highway').value) || Infinity;
+        const parcelFilter = document.getElementById('filter-parcel').value;
+
+        sites = sites.filter(s => {
+            if (s.acreage < acresMin || s.acreage > acresMax) return false;
+            if (computeSiteScore(s.criteria) < scoreMin) return false;
+            if (s.nearestHighway && s.nearestHighway.distance > hwFilter) return false;
+            if (statusFilter === 'for-sale' && !s.forSale) return false;
+            if (statusFilter === 'not-listed' && s.forSale) return false;
+            if (parcelFilter === 'yes' && !s.parcel) return false;
+
+            // Zoning filter
+            if (zoningFilter) {
+                const z = (s.zoning || '').toLowerCase();
+                if (zoningFilter === 'industrial' && !/(industrial|manufacturing|^i[- ]|^hi|^li|^im|^ir|^mi)/.test(z)) return false;
+                if (zoningFilter === 'commercial' && !/(commercial|^c[- ]|^gc|^cs|^hb)/.test(z)) return false;
+                if (zoningFilter === 'agricultural' && !/(agricultural|ag|open space|ranch|farm)/.test(z)) return false;
+                if (zoningFilter === 'none' && !/(none|etj|no zoning)/.test(z)) return false;
+                if (zoningFilter === 'unrestricted' && !/(unrestricted)/.test(z)) return false;
+            }
+
+            // Submarket vacancy filter
+            if (vacancyMax < Infinity) {
+                const stats = INDUSTRIAL_STATS[s.submarket];
+                if (stats && stats.vacancy > vacancyMax) return false;
+            }
+
+            return true;
+        });
+
+        const total = LAND_SITES.filter(s => s.market === marketKey).length;
+        document.getElementById('filter-count').textContent = `${sites.length} of ${total} sites`;
+        return sites;
+    }
+
     // ===== Back to Markets =====
     document.getElementById('btn-back').addEventListener('click', () => {
         document.getElementById('map-view').classList.remove('active');
         document.getElementById('market-selector').classList.add('active');
+        document.getElementById('filter-panel').classList.remove('open');
         closePanels();
     });
 
@@ -279,7 +345,7 @@
         if (sitesLayer) map.removeLayer(sitesLayer);
         sitesLayer = L.layerGroup();
 
-        const marketSites = LAND_SITES.filter(s => s.market === marketKey);
+        const marketSites = getFilteredSites(marketKey);
         marketSites.forEach(site => {
             const score = computeSiteScore(site.criteria);
             const color = scoreToColor(score);
