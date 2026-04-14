@@ -747,7 +747,147 @@ const LAND_SITES = [
         criteria: { hwAccess: 8, zoning: 8, rawLand: 5, laborPool: 7, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 5, infill: 5, utilities: 10 }
     },
 
-    // ===== GIS-VERIFIED VACANT PARCELS (from Dallas County ArcGIS API queries) =====
+    // ===== GIS-VERIFIED PARCELS — HOUSTON (from HCAD ArcGIS API queries) =====
+
+    {
+        id: 'hou-300', name: '10615 Wyman Gordon Dr — Boulevard Partners (69 ac)', market: 'houston', submarket: 'hou-northwest',
+        coords: [29.935, -95.558], acreage: 69.1,
+        zoning: 'None (Houston)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: HCAD #1475890010001. Owner: Boulevard Partners Investments LLC. 69 ac industrial (F1/8002) on Wyman Gordon Dr. Land value $8.5M, total appraised $16.3M. NW Houston US-290 corridor.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'US-290', distance: 1.5 },
+        demographics: { pop5mi: 140000, medianIncome: 65000, laborForce5mi: 70000 },
+        parcel: { id: 'HCAD-1475890010001', owner: 'Boulevard Partners Investments LLC', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1475890010001' },
+        criteria: { hwAccess: 7, zoning: 8, rawLand: 8, laborPool: 8, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 5, infill: 6, utilities: 9 }
+    },
+    {
+        id: 'hou-301', name: '10750 Leonard Rd — Doan (130 ac ag)', market: 'houston', submarket: 'hou-northeast',
+        coords: [29.825, -95.100], acreage: 130.2,
+        zoning: 'Agricultural (A1)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: HCAD #0410370000015. Owner: Doan Rosa Nguyen & Quang Nhut. 130.2 ac agricultural on Leonard Rd. Land value only $130K ($1,000/ac — ag exemption). Largest ag parcel in the East Houston corridor. Near Ship Channel industrial cluster.',
+        utilities: { water: false, sewer: false, gas: false, electric: true, fiber: false },
+        nearestHighway: { name: 'US-90', distance: 2.0 },
+        demographics: { pop5mi: 65000, medianIncome: 45000, laborForce5mi: 32000 },
+        parcel: { id: 'HCAD-0410370000015', owner: 'Doan Rosa Nguyen & Quang Nhut', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=0410370000015' },
+        criteria: { hwAccess: 6, zoning: 7, rawLand: 10, laborPool: 8, subFundamentals: 7, cityGrowth: 8, bizFriendly: 10, airportProx: 4, infill: 4, utilities: 3 }
+    },
+    {
+        id: 'hou-302', name: '3507 Pasadena Fwy — LIT Industrial (94 ac)', market: 'houston', submarket: 'hou-east',
+        coords: [29.716, -95.169], acreage: 93.8,
+        zoning: 'Commercial/Industrial (F1)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: HCAD #1305670010001. Owner: LIT Industrial LP. 93.8 ac on Pasadena Fwy. Land value $15.1M, total appraised $155M. Major Ship Channel logistics parcel. SH-225 access.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'SH-225', distance: 0.3 },
+        demographics: { pop5mi: 175000, medianIncome: 42000, laborForce5mi: 88000 },
+        parcel: {
+            id: 'HCAD-1305670010001', owner: 'LIT Industrial LP',
+            cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1305670010001',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-95.16899, 29.71290], [-95.16836, 29.71284], [-95.16571, 29.71277],
+                    [-95.16569, 29.71940], [-95.17152, 29.71935], [-95.17145, 29.71617],
+                    [-95.17113, 29.71616], [-95.17052, 29.71614], [-95.16983, 29.71612],
+                    [-95.16981, 29.71552], [-95.16981, 29.71545], [-95.16980, 29.71488],
+                    [-95.17054, 29.71491], [-95.17062, 29.71491], [-95.17143, 29.71493],
+                    [-95.17138, 29.71309], [-95.17138, 29.71307], [-95.17137, 29.71304],
+                    [-95.17136, 29.71302], [-95.17134, 29.71300], [-95.17132, 29.71299],
+                    [-95.17130, 29.71297], [-95.17128, 29.71296], [-95.17125, 29.71296],
+                    [-95.17123, 29.71296], [-95.16899, 29.71290]
+                ]]
+            }
+        },
+        criteria: { hwAccess: 9, zoning: 10, rawLand: 6, laborPool: 10, subFundamentals: 8, cityGrowth: 8, bizFriendly: 10, airportProx: 5, infill: 9, utilities: 10 }
+    },
+    {
+        id: 'hou-303', name: '7735 Miller Rd cluster (~220 ac)', market: 'houston', submarket: 'hou-northeast',
+        coords: [29.810, -95.120], acreage: 220,
+        zoning: 'Commercial/Industrial (F1)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: 4-parcel cluster on Miller Rd. OFS International 74ac (HCAD #0502210000060), Warrens Place 55ac (#0502210000065), IOS PCI 48ac (#0502220000095), Miller Road Properties 44ac. Combined ~220 ac industrial corridor. Ship Channel adjacent.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-10E', distance: 1.0 },
+        demographics: { pop5mi: 120000, medianIncome: 44000, laborForce5mi: 60000 },
+        parcel: { id: 'HCAD-0502210000060 +3 adjacent', owner: 'OFS International / Warrens Place / IOS PCI / Miller Rd Props', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=0502210000060' },
+        criteria: { hwAccess: 8, zoning: 10, rawLand: 7, laborPool: 10, subFundamentals: 8, cityGrowth: 8, bizFriendly: 10, airportProx: 5, infill: 8, utilities: 10 }
+    },
+    {
+        id: 'hou-304', name: '13220 Hwy 90 — NP GR Houston (61 ac)', market: 'houston', submarket: 'hou-northeast',
+        coords: [29.820, -95.110], acreage: 61.3,
+        zoning: 'Commercial/Industrial (F1)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: HCAD #1453440010001. Owner: NP GR Houston Phase I LLC. 61.3 ac on Hwy 90 (Crosby Fwy). Land value $6.8M, total appraised $62.4M. Active industrial development site.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'US-90', distance: 0.0 },
+        demographics: { pop5mi: 95000, medianIncome: 46000, laborForce5mi: 48000 },
+        parcel: { id: 'HCAD-1453440010001', owner: 'NP GR Houston Phase I LLC', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1453440010001' },
+        criteria: { hwAccess: 9, zoning: 10, rawLand: 7, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 10, airportProx: 4, infill: 7, utilities: 10 }
+    },
+    {
+        id: 'hou-305', name: '14450 West Rd — TX Auto Auction (49 ac)', market: 'houston', submarket: 'hou-northwest',
+        coords: [29.930, -95.570], acreage: 48.7,
+        zoning: 'Commercial Vacant (F1)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: HCAD #1166570000001. Owner: New TX Auto Auction Services LP. 48.7 ac vacant commercial on West Rd. Land value $7.6M, total $11M. NW Houston corridor. Classified as vacant (8001) — ready for redevelopment.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'US-290', distance: 1.2 },
+        demographics: { pop5mi: 150000, medianIncome: 60000, laborForce5mi: 75000 },
+        parcel: { id: 'HCAD-1166570000001', owner: 'New TX Auto Auction Services LP', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1166570000001' },
+        criteria: { hwAccess: 7, zoning: 8, rawLand: 8, laborPool: 8, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 5, infill: 7, utilities: 10 }
+    },
+    {
+        id: 'hou-306', name: 'Greenhouse Rd, Cypress — CW SCOA (45 ac ag)', market: 'houston', submarket: 'hou-northwest',
+        coords: [29.963, -95.692], acreage: 44.5,
+        zoning: 'Agricultural (A3)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: HCAD #0410680000402. Owner: CW SCOA West LP. 44.5 ac agricultural on Greenhouse Rd in Cypress. Land value $4.8M. Towne Lake community area — transitional location between residential growth and US-290 industrial corridor.',
+        utilities: { water: true, sewer: false, gas: true, electric: true, fiber: false },
+        nearestHighway: { name: 'US-290', distance: 2.5 },
+        demographics: { pop5mi: 125000, medianIncome: 85000, laborForce5mi: 62000 },
+        parcel: {
+            id: 'HCAD-0410680000402', owner: 'CW SCOA West LP',
+            cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=0410680000402',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-95.69487, 29.96675], [-95.69511, 29.96692], [-95.69506, 29.96422],
+                    [-95.69494, 29.96417], [-95.69492, 29.96415], [-95.69473, 29.96406],
+                    [-95.69454, 29.96396], [-95.69436, 29.96385], [-95.69418, 29.96374],
+                    [-95.69401, 29.96362], [-95.69384, 29.96350], [-95.69367, 29.96337],
+                    [-95.69351, 29.96323], [-95.69336, 29.96309], [-95.69321, 29.96294],
+                    [-95.69306, 29.96279], [-95.69292, 29.96263], [-95.69278, 29.96247],
+                    [-95.69265, 29.96231], [-95.69252, 29.96214], [-95.69249, 29.96209],
+                    [-95.69248, 29.96207], [-95.69230, 29.96180], [-95.69229, 29.96178],
+                    [-95.69221, 29.96167], [-95.69213, 29.96157], [-95.69205, 29.96146],
+                    [-95.69197, 29.96136], [-95.69186, 29.96125], [-95.69176, 29.96114],
+                    [-95.69165, 29.96103], [-95.69153, 29.96093], [-95.69142, 29.96083],
+                    [-95.69130, 29.96074], [-95.69076, 29.96034], [-95.69059, 29.96036],
+                    [-95.69058, 29.96036], [-95.69040, 29.96059], [-95.69029, 29.96072],
+                    [-95.69018, 29.96085], [-95.69021, 29.96087], [-95.69007, 29.96103],
+                    [-95.68992, 29.96118], [-95.68865, 29.96245], [-95.69263, 29.96520],
+                    [-95.69487, 29.96675]
+                ]]
+            }
+        },
+        criteria: { hwAccess: 6, zoning: 6, rawLand: 9, laborPool: 6, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 4, infill: 4, utilities: 5 }
+    },
+    {
+        id: 'hou-307', name: '711 Shields St, Channelview — LaBarge (62 ac)', market: 'houston', submarket: 'hou-east',
+        coords: [29.790, -95.100], acreage: 62.5,
+        zoning: 'Commercial/Industrial (F1)', taxRate: 2.35, taxAuthority: 'Harris County',
+        forSale: false, askingPrice: null, listingUrl: null,
+        notes: 'GIS VERIFIED: HCAD #1308990030001. Owner: LaBarge Realty LLC. 62.5 ac on Shields St in Channelview. Land value $4.1M, total $5.9M. Ship Channel industrial corridor.',
+        utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
+        nearestHighway: { name: 'I-10E', distance: 0.8 },
+        demographics: { pop5mi: 130000, medianIncome: 43000, laborForce5mi: 65000 },
+        parcel: { id: 'HCAD-1308990030001', owner: 'LaBarge Realty LLC', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1308990030001' },
+        criteria: { hwAccess: 8, zoning: 10, rawLand: 7, laborPool: 10, subFundamentals: 8, cityGrowth: 8, bizFriendly: 10, airportProx: 4, infill: 8, utilities: 10 }
+    },
+
+    // ===== GIS-VERIFIED VACANT PARCELS — DFW (from Dallas County ArcGIS API queries) =====
 
     {
         id: 'dfw-300', name: '11131 Goodnight Ln — JMS LLC (75 ac)', market: 'dfw', submarket: 'dfw-stemmons',
