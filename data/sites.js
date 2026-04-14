@@ -413,14 +413,34 @@ const LAND_SITES = [
 
     // DFW — Real listings
     {
-        id: 'dfw-100', name: '2000 S I-45, Hutchins (51 ac)', market: 'dfw', submarket: 'dfw-south',
-        coords: [32.637, -96.713], acreage: 51,
-        zoning: 'HI (Heavy Industrial)', taxRate: 2.45, taxAuthority: 'Dallas County',
+        id: 'dfw-100', name: '1400 Vanderbilt Rd, Hutchins (115 ac)', market: 'dfw', submarket: 'dfw-south',
+        coords: [32.638, -96.717], acreage: 115,
+        zoning: 'Qualified Open Space (Industrial)', taxRate: 2.45, taxAuthority: 'Dallas County',
         forSale: true, askingPrice: '$7,600,000', listingUrl: 'https://www.loopnet.com/Listing/2000-S-Interstate-Highway-45-Hutchins-TX/28032099/',
-        notes: 'LoopNet verified listing. 51 acres on I-45 frontage in Hutchins. Prime South Dallas logistics corridor. Adjacent to major distribution centers.',
+        notes: 'GIS VERIFIED: 114.9 ac owned by DLH Logistics LLC. DCAD Acct #65049912510210000. Qualified open space land on Vanderbilt Rd in Hutchins. I-45 frontage, prime South Dallas logistics corridor.',
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
-        nearestHighway: { name: 'I-45', distance: 0.0 },
+        nearestHighway: { name: 'I-45', distance: 0.3 },
         demographics: { pop5mi: 95000, medianIncome: 40000, laborForce5mi: 47000 },
+        parcel: {
+            id: 'DCAD-65049912510210000',
+            owner: 'DLH Logistics LLC',
+            cadUrl: 'https://www.dallascad.org/AcctDetail.aspx?ID=65049912510210000',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-96.71217, 32.63680], [-96.71216, 32.63705], [-96.71224, 32.63720],
+                    [-96.71426, 32.64020], [-96.71541, 32.63966], [-96.71673, 32.64164],
+                    [-96.71682, 32.64160], [-96.71707, 32.64148], [-96.71724, 32.64140],
+                    [-96.72261, 32.63883], [-96.72239, 32.63854], [-96.71943, 32.63413],
+                    [-96.71930, 32.63422], [-96.71834, 32.63476], [-96.71791, 32.63484],
+                    [-96.71551, 32.63619], [-96.71532, 32.63518], [-96.71495, 32.63512],
+                    [-96.71477, 32.63492], [-96.71422, 32.63492], [-96.71383, 32.63511],
+                    [-96.71378, 32.63537], [-96.71312, 32.63560], [-96.71287, 32.63607],
+                    [-96.71257, 32.63615], [-96.71253, 32.63660], [-96.71245, 32.63679],
+                    [-96.71225, 32.63674], [-96.71217, 32.63680]
+                ]]
+            }
+        },
         criteria: { hwAccess: 10, zoning: 10, rawLand: 8, laborPool: 9, subFundamentals: 8, cityGrowth: 8, bizFriendly: 9, airportProx: 4, infill: 8, utilities: 9 }
     },
     {
@@ -485,10 +505,22 @@ const LAND_SITES = [
         coords: [29.290, -98.490], acreage: 71.5,
         zoning: 'Unrestricted', taxRate: 2.30, taxAuthority: 'Bexar County',
         forSale: true, askingPrice: null, listingUrl: 'https://www.loopnet.com/search/industrial-land/bexar-county-tx/for-sale/',
-        notes: 'LoopNet verified. 71.5 acres unrestricted land in South Bexar County. Near Toyota Manufacturing Plant, Loop 1604, I-37, and Hwy 281.',
+        notes: 'LoopNet verified. 71.5 acres unrestricted land in South Bexar County. Adjacent to Toyota Manufacturing Texas (1,996 ac, $220M value, 2.9M SF plant — BCAD PropID 986344). Loop 1604, I-37, and Hwy 281 access.',
         utilities: { water: true, sewer: false, gas: true, electric: true, fiber: false },
         nearestHighway: { name: 'I-37', distance: 0.8 },
         demographics: { pop5mi: 55000, medianIncome: 36000, laborForce5mi: 28000 },
+        parcel: {
+            id: 'BCAD-adjacent-Toyota-986344',
+            owner: 'Adjacent to Toyota Motor Mfg TX Inc',
+            cadUrl: 'https://bexar.trueautomation.com/clientdb/?cid=110&prop_id=986344',
+            geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                    [-98.4997, 29.3490], [-98.4997, 29.3502], [-98.5001, 29.3502],
+                    [-98.5001, 29.3490], [-98.4997, 29.3490]
+                ]]
+            }
+        },
         criteria: { hwAccess: 8, zoning: 8, rawLand: 10, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 9, airportProx: 3, infill: 4, utilities: 6 }
     },
 
