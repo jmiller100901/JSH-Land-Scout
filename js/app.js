@@ -198,7 +198,7 @@
     // ===== Toggle Overlays =====
     document.getElementById('toggle-submarkets').addEventListener('change', applyToggles);
     document.getElementById('toggle-sites').addEventListener('change', applyToggles);
-    document.getElementById('toggle-highways').addEventListener('change', applyToggles);
+    // toggle-highways removed from UI
     document.getElementById('toggle-airports').addEventListener('change', applyToggles);
 
     function applyToggles() {
