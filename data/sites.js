@@ -758,7 +758,7 @@ const LAND_SITES = [
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
         nearestHighway: { name: 'US-290', distance: 1.5 },
         demographics: { pop5mi: 140000, medianIncome: 65000, laborForce5mi: 70000 },
-        parcel: { id: 'HCAD-1475890010001', owner: 'Boulevard Partners Investments LLC', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1475890010001' },
+        parcel: { id: 'HCAD-1475890010001', owner: 'Boulevard Partners Investments LLC', mailingAddr: '1330 Post Oak Blvd Ste 2700, Houston, TX 77056', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1475890010001' },
         criteria: { hwAccess: 7, zoning: 8, rawLand: 8, laborPool: 8, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 5, infill: 6, utilities: 9 }
     },
     {
@@ -770,7 +770,7 @@ const LAND_SITES = [
         utilities: { water: false, sewer: false, gas: false, electric: true, fiber: false },
         nearestHighway: { name: 'US-90', distance: 2.0 },
         demographics: { pop5mi: 65000, medianIncome: 45000, laborForce5mi: 32000 },
-        parcel: { id: 'HCAD-0410370000015', owner: 'Doan Rosa Nguyen & Quang Nhut', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=0410370000015' },
+        parcel: { id: 'HCAD-0410370000015', owner: 'Doan Rosa Nguyen & Quang Nhut', mailingAddr: '7827 Gulfton St, Houston, TX 77036', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=0410370000015' },
         criteria: { hwAccess: 6, zoning: 7, rawLand: 10, laborPool: 8, subFundamentals: 7, cityGrowth: 8, bizFriendly: 10, airportProx: 4, infill: 4, utilities: 3 }
     },
     {
@@ -811,7 +811,7 @@ const LAND_SITES = [
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
         nearestHighway: { name: 'I-10E', distance: 1.0 },
         demographics: { pop5mi: 120000, medianIncome: 44000, laborForce5mi: 60000 },
-        parcel: { id: 'HCAD-0502210000060 +3 adjacent', owner: 'OFS International / Warrens Place / IOS PCI / Miller Rd Props', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=0502210000060' },
+        parcel: { id: 'HCAD-0502210000060 +3 adjacent', owner: 'OFS International LLC (primary)', mailingAddr: '7735 Miller Road #3, Houston, TX 77049', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=0502210000060' },
         criteria: { hwAccess: 8, zoning: 10, rawLand: 7, laborPool: 10, subFundamentals: 8, cityGrowth: 8, bizFriendly: 10, airportProx: 5, infill: 8, utilities: 10 }
     },
     {
@@ -823,7 +823,7 @@ const LAND_SITES = [
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
         nearestHighway: { name: 'US-90', distance: 0.0 },
         demographics: { pop5mi: 95000, medianIncome: 46000, laborForce5mi: 48000 },
-        parcel: { id: 'HCAD-1453440010001', owner: 'NP GR Houston Phase I LLC', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1453440010001' },
+        parcel: { id: 'HCAD-1453440010001', owner: 'NP GR Houston Phase I LLC', mailingAddr: '3102 Oak Lawn Ave Ste 540, Dallas, TX 75219', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1453440010001' },
         criteria: { hwAccess: 9, zoning: 10, rawLand: 7, laborPool: 9, subFundamentals: 7, cityGrowth: 8, bizFriendly: 10, airportProx: 4, infill: 7, utilities: 10 }
     },
     {
@@ -835,7 +835,7 @@ const LAND_SITES = [
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
         nearestHighway: { name: 'US-290', distance: 1.2 },
         demographics: { pop5mi: 150000, medianIncome: 60000, laborForce5mi: 75000 },
-        parcel: { id: 'HCAD-1166570000001', owner: 'New TX Auto Auction Services LP', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1166570000001' },
+        parcel: { id: 'HCAD-1166570000001', owner: 'New TX Auto Auction Services LP', mailingAddr: '6205A Peachtree Dunwoody Rd, Atlanta, GA 30328', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1166570000001' },
         criteria: { hwAccess: 7, zoning: 8, rawLand: 8, laborPool: 8, subFundamentals: 7, cityGrowth: 9, bizFriendly: 10, airportProx: 5, infill: 7, utilities: 10 }
     },
     {
@@ -883,7 +883,7 @@ const LAND_SITES = [
         utilities: { water: true, sewer: true, gas: true, electric: true, fiber: true },
         nearestHighway: { name: 'I-10E', distance: 0.8 },
         demographics: { pop5mi: 130000, medianIncome: 43000, laborForce5mi: 65000 },
-        parcel: { id: 'HCAD-1308990030001', owner: 'LaBarge Realty LLC', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1308990030001' },
+        parcel: { id: 'HCAD-1308990030001', owner: 'LaBarge Realty LLC', mailingAddr: '211 N Broadway Ste 3050, Saint Louis, MO 63102', cadUrl: 'https://public.hcad.org/records/details.asp?cession_number=1308990030001' },
         criteria: { hwAccess: 8, zoning: 10, rawLand: 7, laborPool: 10, subFundamentals: 8, cityGrowth: 8, bizFriendly: 10, airportProx: 4, infill: 8, utilities: 10 }
     },
 

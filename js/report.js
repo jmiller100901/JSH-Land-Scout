@@ -88,6 +88,9 @@
             let ownerHtml = '';
             if (site.parcel && site.parcel.owner) {
                 ownerHtml = `<div class="owner-name">${site.parcel.owner}</div>`;
+                if (site.parcel.mailingAddr) {
+                    ownerHtml += `<div class="owner-addr">${site.parcel.mailingAddr}</div>`;
+                }
                 if (site.parcel.cadUrl) {
                     ownerHtml += `<div class="owner-links"><a href="${site.parcel.cadUrl}" target="_blank">CAD Record</a></div>`;
                 }
@@ -154,7 +157,7 @@
         let sites = marketFilter === 'all' ? LAND_SITES : LAND_SITES.filter(s => s.market === marketFilter);
 
         const headers = ['ID', 'Name', 'Market', 'Submarket', 'Score', 'Acreage', 'Zoning', 'Tax Rate',
-            'Tax Authority', 'For Sale', 'Asking Price', 'Owner', 'CAD URL', 'Nearest Highway', 'HW Distance (mi)',
+            'Tax Authority', 'For Sale', 'Asking Price', 'Owner', 'Owner Mailing Address', 'CAD URL', 'Nearest Highway', 'HW Distance (mi)',
             'Pop 5mi', 'Median Income', 'Labor Force 5mi', 'SM Vacancy', 'SM Rent', 'Listing URL',
             'Google Maps', 'LandGlide', 'Notes'];
 
@@ -162,6 +165,7 @@
             const score = computeSiteScore(s.criteria);
             const stats = INDUSTRIAL_STATS[s.submarket];
             const owner = s.parcel ? s.parcel.owner : '';
+            const ownerAddr = s.parcel ? (s.parcel.mailingAddr || '') : '';
             const cadUrl = s.parcel ? (s.parcel.cadUrl || '') : '';
             const hw = s.nearestHighway ? s.nearestHighway.name : '';
             const hwDist = s.nearestHighway ? s.nearestHighway.distance : '';
@@ -169,7 +173,7 @@
             return [
                 s.id, `"${s.name}"`, s.market, s.submarket, score, s.acreage, `"${s.zoning}"`, s.taxRate,
                 `"${s.taxAuthority}"`, s.forSale ? 'Yes' : 'No', s.askingPrice || '',
-                `"${owner}"`, cadUrl, hw, hwDist,
+                `"${owner}"`, `"${ownerAddr}"`, cadUrl, hw, hwDist,
                 d.pop5mi || '', d.medianIncome || '', d.laborForce5mi || '',
                 stats ? stats.vacancy : '', stats ? stats.avgRent : '',
                 s.listingUrl || '',
